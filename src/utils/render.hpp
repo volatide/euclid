@@ -1,4 +1,5 @@
 #include <glm/vec2.hpp> // glm::vec2
+#include <GL/glew.h>
 #include <string>
 #include <vector>
 #include "color.hpp"
