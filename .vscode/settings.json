@@ -8,6 +8,7 @@
         "*.desktop": "ini",
         "*.layout": "xml",
         "*.pa": "shellscript",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "random": "cpp"
     }
 }
