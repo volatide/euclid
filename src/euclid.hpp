@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "utils/render.hpp"
+#include "utils/color.hpp"
 
 namespace euclid {
 
