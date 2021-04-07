@@ -54,15 +54,14 @@ namespace euclid {
 		return Color::fromHSV(h, s, v, 255);
 	}
 
-	Color Color::fromHEX(std::string hex) {
-		// TODO: Implement this
-		return Color(0, 0, 0, 0);
-	}
-	uint32_t Color::toNumberRGBA() {
-		return 0x1000000 * red + 0x10000 * green + 0x100 * blue + alpha;
-	}
-	uint32_t Color::toNumberRGB() {
-			return 0x10000 * red + 0x100 * green + blue;
+	Color Color::fromRGBNumber(uint32_t num) {
+		uint8_t red = (num & 0xff0000) >> 16;
+		uint8_t green = (num & 0x00ff00) >> 8;
+		uint8_t blue = num & 0x0000ff;
+		return Color(red, green, blue);
 	}
 
+	uint32_t Color::toRGBNumber() {
+		return 0x10000 * red + 0x100 * green + blue;
+	}
 } // namespace euclid

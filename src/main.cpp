@@ -26,9 +26,10 @@ int main() {
 		return 1;
 	}
 
-	euclid::Color color = euclid::Color(255, 255, 255);
-	std::cout << color.toNumberRGBA() << std::endl;
-	std::cout << color.toNumberRGB() << std::endl;
+	euclid::Color color = euclid::Color(0, 255, 0);
+	euclid::Color color2 = euclid::Color::fromRGBNumber(0x00ff00);
+	std::cout << (int)color.green << std::endl;
+	std::cout << (int)color2.green << std::endl;
 
 	// int color = 0;
 	// double val = 0;

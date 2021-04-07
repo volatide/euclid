@@ -1,7 +1,7 @@
 #pragma once
-#include <string>
-#include "utils/render.hpp"
 #include "utils/color.hpp"
+#include "utils/render.hpp"
+#include <string>
 
 namespace euclid {
 
