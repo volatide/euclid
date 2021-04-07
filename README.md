@@ -10,8 +10,10 @@ A game engine
 
 ## Building and running
 
-    mkdir build
-    cd build
-    cmake ..
-    make
-    bin/euclid
+```sh
+mkdir build
+cd build
+cmake ..
+make
+bin/euclid
+```
