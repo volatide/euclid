@@ -1,8 +1,8 @@
-#include <glm/vec2.hpp> // glm::vec2
+#include "color.hpp"
 #include <GL/glew.h>
+#include <glm/vec2.hpp> // glm::vec2
 #include <string>
 #include <vector>
-#include "color.hpp"
 
 namespace euclid::render {
 	struct Point {
