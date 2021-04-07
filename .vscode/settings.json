@@ -9,6 +9,7 @@
         "*.layout": "xml",
         "*.pa": "shellscript",
         "cmath": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "string": "cpp"
     }
 }
