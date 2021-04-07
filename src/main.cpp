@@ -28,7 +28,7 @@ int main() {
 
 		glBegin(GL_TRIANGLES);
 
-		glColor3f(((float)color)/255, 0.0f, 0.0f);
+		glColor3f(((float)color) / 255, 0.0f, 0.0f);
 		color = (color + 1) % 255;
 
 		glVertex2f(-1.0f, 1.0f);
