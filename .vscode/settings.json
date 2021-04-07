@@ -2,5 +2,6 @@
     "[cpp]": {
         "editor.tabSize": 4,
         "editor.insertSpaces": false
-    }
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

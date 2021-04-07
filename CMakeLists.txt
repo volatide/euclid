@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.11)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 # Project name
 project(euclid VERSION 0.0.1)
 
