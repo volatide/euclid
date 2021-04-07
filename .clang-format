@@ -3,3 +3,8 @@ IndentWidth: 4
 TabWidth: 4
 UseTab: Always
 PointerAlignment: Left
+AlignTrailingComments: false
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+NamespaceIndentation: All

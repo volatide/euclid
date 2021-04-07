@@ -4,11 +4,11 @@
 
 namespace euclid::render {
 
-struct Point {
-	int x, y;
-	Color color;
-};
+	struct Point {
+		int x, y;
+		Color color;
+	};
 
-using namespace glm;
-void draw(std::vector<Point> points);
+	using namespace glm;
+	void draw(std::vector<Point> points);
 } // namespace euclid::render
