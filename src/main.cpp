@@ -7,7 +7,7 @@
 #include <glm/glm.hpp>
 
 int main() {
-	GLFWwindow *window;
+	GLFWwindow* window;
 
 	if (!glfwInit())
 		return 1;
