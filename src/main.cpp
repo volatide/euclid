@@ -13,6 +13,7 @@ int main() {
 		return 1;
 
 	window = glfwCreateWindow(640, 480, "euclid", NULL, NULL);
+	glfwSetWindowTitle(window, "Euclid Engine");
 	if (!window) {
 		glfwTerminate();
 		return 1;
