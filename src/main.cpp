@@ -9,7 +9,8 @@
 int main() {
 	GLFWwindow* window;
 	
-	if(!glfwInit()) { return 1; } // if it fails to init then exit 1
+	if(!glfwInit())
+		return 1;
 
 	window = glfwCreateWindow(640, 480, "Euclid Engine", NULL, NULL);
 	if(!window) {
