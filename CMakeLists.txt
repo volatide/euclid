@@ -4,4 +4,4 @@ cmake_minimum_required(VERSION 3.10)
 project(euclid VERSION 0.0.1)
 
 # Execs
-add_executable(euclid main.cpp)
+add_executable(euclid src/main.cpp)
