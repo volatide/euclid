@@ -12,17 +12,32 @@ int main() {
 	if (!glfwInit())
 		return 1;
 
-	window = glfwCreateWindow(640, 480, "Euclid Engine", NULL, NULL);
+	window = glfwCreateWindow(640, 480, "euclid", NULL, NULL);
 	if (!window) {
 		glfwTerminate();
 		return 1;
 	}
 
+	int color = 0;
+
 	glfwMakeContextCurrent(window);
 
 	while (!glfwWindowShouldClose(window)) {
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		glBegin(GL_TRIANGLES);
+
+		glColor3f(((float)color)/255, 0.0f, 0.0f);
+		color = (color + 1) % 255;
+
+		glVertex2f(-1.0f, 1.0f);
+		glVertex2f(1.0f, 1.0f);
+		glVertex2f(0.0f, -1.0f);
+
+		glEnd();
+
 		glfwSwapBuffers(window);
+
 		glfwPollEvents();
 	}
 
