@@ -6,6 +6,9 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
+// Euclid
+#include "euclid.hpp"
+
 void resizeWindowHandle(GLFWwindow* window, int w, int h) {
 	glViewport(0, 0, w, h);
 }
@@ -23,8 +26,8 @@ int main() {
 		return 1;
 	}
 
-	int color = 0;
-	double val = 0;
+	// int color = 0;
+	// double val = 0;
 
 	glfwMakeContextCurrent(window);
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -37,20 +40,7 @@ int main() {
 		// glfwGetFramebufferSize(window, &w, &h);
 		// glViewport(0, 0, w, h);
 
-		glBegin(GL_QUADS);
-
-		glColor3f(((float)color) / 255, 0.0f, 0.0f);
-		val += 0.02;
-		color = (int)((sin(val) + 1) * 128);
-
-		glVertex2f(-((float)color) / 255, 1.0f);
-		glColor3f(0.0f, 0.0f, ((float)color) / 255);
-		glVertex2f(((float)color) / 255, 1.0f);
-		glColor3f(0.0f, ((float)color) / 255, 0.0f);
-		glVertex2f(0.0f, -((float)color) / 255);
-		glVertex2f(1.0f, -((float)color) / 255);
-
-		glEnd();
+		// euclid::render::draw();
 
 		glfwSwapBuffers(window);
 
