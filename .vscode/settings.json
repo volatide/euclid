@@ -3,5 +3,11 @@
         "editor.tabSize": 4,
         "editor.insertSpaces": false
     },
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "files.associations": {
+        "*.desktop": "ini",
+        "*.layout": "xml",
+        "*.pa": "shellscript",
+        "cmath": "cpp"
+    }
 }

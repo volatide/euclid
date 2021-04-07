@@ -31,9 +31,9 @@ int main() {
 		glColor3f(((float)color) / 255, 0.0f, 0.0f);
 		color = (color + 1) % 255;
 
-		glVertex2f(-1.0f, 1.0f);
-		glVertex2f(1.0f, 1.0f);
-		glVertex2f(0.0f, -1.0f);
+		glVertex2f(-((float)color) / 255, 1.0f);
+		glVertex2f(((float)color) / 255, 1.0f);
+		glVertex2f(0.0f, -((float)color) / 255);
 
 		glEnd();
 
