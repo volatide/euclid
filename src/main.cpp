@@ -6,6 +6,13 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
+// Euclid
+#include "euclid.hpp"
+
+void resizeWindowHandle(GLFWwindow* window, int w, int h) {
+	glViewport(0, 0, w, h);
+}
+
 int main() {
 	GLFWwindow* window;
 
@@ -19,23 +26,26 @@ int main() {
 		return 1;
 	}
 
-	int color = 0;
+	euclid::Color color = euclid::Color(0, 255, 0);
+	euclid::Color color2 = euclid::Color::fromRGBNumber(0x00ff00);
+	std::cout << (int)color.green << std::endl;
+	std::cout << (int)color2.green << std::endl;
+
+	// int color = 0;
+	// double val = 0;
 
 	glfwMakeContextCurrent(window);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	// int w, h;
+
+	glfwSetWindowSizeCallback(window, &resizeWindowHandle);
 
 	while (!glfwWindowShouldClose(window)) {
 		glClear(GL_COLOR_BUFFER_BIT);
+		// glfwGetFramebufferSize(window, &w, &h);
+		// glViewport(0, 0, w, h);
 
-		glBegin(GL_TRIANGLES);
-
-		glColor3f(((float)color) / 255, 0.0f, 0.0f);
-		color = (color + 1) % 255;
-
-		glVertex2f(-((float)color) / 255, 1.0f);
-		glVertex2f(((float)color) / 255, 1.0f);
-		glVertex2f(0.0f, -((float)color) / 255);
-
-		glEnd();
+		// euclid::render::draw();
 
 		glfwSwapBuffers(window);
 
