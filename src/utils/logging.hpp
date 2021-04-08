@@ -1,13 +1,12 @@
 #include <string>
 
-namespace euclid {
-
-	enum LogScope {
+namespace euclid::log {
+	enum Scope {
 		CORE,
 		APP
 	};
 
-	enum LogLevel {
+	enum Level {
 		DEBUG,
 		INFO,
 		WARN,
@@ -24,12 +23,12 @@ namespace euclid {
 		"FATAL!"
 	}
 	
-	void log(LogScope scope, LogLevel level, const std::string message);
+	void append(Scope scope, Level level, const std::string message);
 
-	void debug(LogScope scope, const std::string message);
-	void info(LogScope scope, const std::string message);
-	void warn(LogScope scope, const std::string message);
-	void error(LogScope scope, const std::string message);
-	void fatal(LogScope scope, const std::string message);
+	void debug(Scope scope, const std::string message);
+	void info(Scope scope, const std::string message);
+	void warn(Scope scope, const std::string message);
+	void error(Scope scope, const std::string message);
+	void fatal(Scope scope, const std::string message);
 }
 
