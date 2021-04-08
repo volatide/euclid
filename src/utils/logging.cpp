@@ -7,7 +7,7 @@
 
 namespace euclid::log {
 	void append(Scope scope, Level level, const std::string message) {
-		printf(LOG_FORMAT, std::time(0), euclid::log::LevelPrefix[level], message); 
+		printf(LOG_FORMAT, std::time(0), euclid::log::LevelPrefix[level], message.c_str()); 
 	}
 
 	void debug(Scope scope, const std::string message);
