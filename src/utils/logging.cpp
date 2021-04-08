@@ -14,11 +14,9 @@ namespace euclid::log {
 			printf(LOG_FORMAT, std::time(0), ScopePrefix[scope].c_str(), LevelPrefix[level].c_str(), message.c_str()); 
 	}
 
-	/*
-	void debug(Scope scope, const std::string message);
-	void info(Scope scope, const std::string message);
-	void warn(Scope scope, const std::string message);
-	void error(Scope scope, const std::string message);
-	void fatal(Scope scope, const std::string message);
-	*/
+	void debug(Scope scope, const std::string message) { append(scope, Level::DEBUG, message); }
+	void info(Scope scope, const std::string message) { append(scope, Level::INFO, message); }
+	void warn(Scope scope, const std::string message) { append(scope, Level::WARN, message); }
+	void error(Scope scope, const std::string message) { append(scope, Level::ERROR, message); }
+	void fatal(Scope scope, const std::string message) { append(scope, Level::FATAL, message); }
 }
