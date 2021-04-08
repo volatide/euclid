@@ -15,5 +15,4 @@ namespace euclid {
 	void warn(LogScope scope, const std::string message);
 	void error(LogScope scope, const std::string message);
 	void fatal(LogScope scope, const std::string message);
-
 }
