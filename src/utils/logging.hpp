@@ -15,7 +15,7 @@ namespace euclid {
 
 }
 
-#ifdef LOG_LEVEL_DEBUG
+#ifdef LOG_DEBUG
 #define APP_DEBUG(message) euclid::debug(euclid::LogScope::APP, message);
-#define APP_DEBUG(message) euclid::debug(euclid::LogScope::APP, message);
+#define APP_INFO(message) euclid::info(euclid::LogScope::APP, message);
 #endif
