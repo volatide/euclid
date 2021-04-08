@@ -8,8 +8,10 @@ namespace euclid::log {
 	Level GLOBAL_LOG_LEVEL = Level::DEBUG; // global log level 	
 
 	void append(Scope scope, Level level, const std::string message) {
-		// c_str() is a dumb workaround
-		printf(LOG_FORMAT, std::time(0), ScopePrefix[scope].c_str(), LevelPrefix[level].c_str(), message.c_str()); 
+
+		if( level >= GLOBAL_LOG_LEVEL )
+			// c_str() is a dumb workaround
+			printf(LOG_FORMAT, std::time(0), ScopePrefix[scope].c_str(), LevelPrefix[level].c_str(), message.c_str()); 
 	}
 
 	/*
