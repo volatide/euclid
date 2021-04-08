@@ -14,7 +14,7 @@ namespace euclid::log {
 		FATAL
 	};
 
-	const std::string LevelPrefix[] = {
+	const char* LevelPrefix[] = {
 		"DEBUG",
 		"INFO",
 		"WARN",
