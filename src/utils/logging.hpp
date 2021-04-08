@@ -3,16 +3,22 @@
 
 namespace euclid::log {
 	enum Scope {
-		CORE,
-		APP
+		CORE = 0,
+		APP = 1
 	};
 
 	enum Level {
-		DEBUG,
-		INFO,
-		WARN,
-		ERROR,
-		FATAL
+		DEBUG = 0,
+		INFO = 1,
+		WARN = 2,
+		ERROR = 3,
+		FATAL = 4
+	};
+
+
+	const std::string ScopePrefix[] = {
+		"Euclid",
+		"App"
 	};
 
 	const std::string LevelPrefix[] = {

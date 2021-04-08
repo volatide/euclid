@@ -2,12 +2,14 @@
 #include <stdio.h>
 #include <ctime>
 
-#define LOG_FORMAT "[%d] %s: %s\n" // [$time] $prefix: $message
+#define LOG_FORMAT "[%d] (%s) %s: %s\n" // [$time] %scope $prefix: $message
 
 namespace euclid::log {
+	Level GLOBAL_LOG_LEVEL = Level::DEBUG; // global log level 	
+
 	void append(Scope scope, Level level, const std::string message) {
 		// c_str() is a dumb workaround
-		printf(LOG_FORMAT, std::time(0), euclid::log::LevelPrefix[level].c_str(), message.c_str()); 
+		printf(LOG_FORMAT, std::time(0), ScopePrefix[scope].c_str(), LevelPrefix[level].c_str(), message.c_str()); 
 	}
 
 	/*
