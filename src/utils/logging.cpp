@@ -6,6 +6,7 @@
 
 namespace euclid::log {
 	void append(Scope scope, Level level, const std::string message) {
+		// c_str() is a dumb workaround
 		printf(LOG_FORMAT, std::time(0), euclid::log::LevelPrefix[level].c_str(), message.c_str()); 
 	}
 
