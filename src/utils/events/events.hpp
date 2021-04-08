@@ -1,5 +1,7 @@
 #include <queue>
 
-namespace euclid::events {
-
+namespace euclid::event {
+	class Emitter {
+		void on();
+	}	
 }
