@@ -14,14 +14,13 @@ namespace euclid::log {
 		FATAL
 	};
 
-
-	const std::string LogPrefix[] = {
+	const std::string LevelPrefix[] = {
 		"DEBUG",
 		"INFO",
 		"WARN",
 		"ERROR",
 		"FATAL!"
-	}
+	};
 	
 	void append(Scope scope, Level level, const std::string message);
 

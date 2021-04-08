@@ -32,7 +32,7 @@ int main() {
 	std::cout << (int)color2.green << std::endl;
 
 	// Log test
-	euclid::log();
+	euclid::log::append(euclid::log::Scope::APP, euclid::log::Level::DEBUG, "TEST");
 
 	// int color = 0;
 	// double val = 0;
