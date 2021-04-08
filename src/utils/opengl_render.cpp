@@ -24,8 +24,7 @@ namespace euclid::render {
 		}
 
 		for (Point const& p : points) {
-			glColor3f(1.0f, 1.0f,
-					  1.0f); // TODO: make color to float & ! uint / 255
+			glColor3f(1.0f, 1.0f, 1.0f); // TODO: make color to float & ! uint / 255
 			glVertex2f(p.x, p.y);
 		}
 
