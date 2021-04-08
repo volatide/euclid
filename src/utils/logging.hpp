@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 
 namespace euclid::log {
@@ -14,7 +15,7 @@ namespace euclid::log {
 		FATAL
 	};
 
-	const char* LevelPrefix[] = {
+	const std::string LevelPrefix[] = {
 		"DEBUG",
 		"INFO",
 		"WARN",
