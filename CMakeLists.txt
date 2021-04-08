@@ -13,7 +13,7 @@ find_package(GLEW REQUIRED)
 
 
 # Executables
-add_executable(euclid src/main.cpp src/utils/color.cpp)
+add_executable(euclid src/main.cpp src/utils/color.cpp src/utils/logging.cpp)
 
 target_link_libraries(euclid glfw)
 target_link_libraries(euclid GLEW)

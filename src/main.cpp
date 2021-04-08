@@ -31,6 +31,9 @@ int main() {
 	std::cout << (int)color.green << std::endl;
 	std::cout << (int)color2.green << std::endl;
 
+	// Log test
+	euclid::log::debug(euclid::log::Scope::APP, "THIS IS A DEBUG TEST");
+
 	// int color = 0;
 	// double val = 0;
 
