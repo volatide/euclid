@@ -1,8 +1,10 @@
 #include "render.hpp"
 
 namespace euclid::render {
-	Point::Point(int X, int Y, Color COLOR) {
-
+	Point::Point(int X, int Y, Color clr) {
+		color = clr;
+		x = X;
+		y = Y;
 	}
 
 	using namespace glm;

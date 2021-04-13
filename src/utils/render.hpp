@@ -8,7 +8,7 @@ namespace euclid::render {
 	struct Point {
 		int x, y;
 		Color color;
-		Point(int X, int Y, Color COLOR);
+		Point(int X, int Y, Color clr);
 	};
 
 	using namespace glm;
