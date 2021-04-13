@@ -44,16 +44,34 @@ int main() {
 
 	glfwSetWindowSizeCallback(window, &resizeWindowHandle);
 
+	// RENDER TEST
+	euclid::Color red_clr(255, 25, 25);
+
 	std::vector<euclid::render::Point> cube_test;
-	//euclid::render::Point point1;
-	//cube_test.push_back();
+
+	// TOP LEFT
+	euclid::render::Point point1(-1.0f, 1.0f, red_clr);
+	cube_test.push_back(point1);
+	
+	// TOP RIGHT
+	euclid::render::Point point2(1.0f, 1.0f, red_clr);
+	cube_test.push_back(point2);
+
+	// BOTTOM LEFT
+	euclid::render::Point point3(-1.0f, -1.0f, red_clr);
+	cube_test.push_back(point3);
+	
+	// BOTTOM RIGHT
+	euclid::render::Point point4(1.0f, -1.0f, red_clr);
+	cube_test.push_back(point4);
+
 
 	while (!glfwWindowShouldClose(window)) {
 		glClear(GL_COLOR_BUFFER_BIT);
 		// glfwGetFramebufferSize(window, &w, &h);
 		// glViewport(0, 0, w, h);
 
-		// euclid::render::draw();
+		euclid::render::draw(cube_test);
 
 		glfwSwapBuffers(window);
 
