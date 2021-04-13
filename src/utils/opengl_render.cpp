@@ -1,6 +1,10 @@
 #include "render.hpp"
 
 namespace euclid::render {
+	Point::Point(int X, int Y, Color COLOR) {
+
+	}
+
 	using namespace glm;
 
 	void draw(std::vector<Point> points) {

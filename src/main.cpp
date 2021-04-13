@@ -13,6 +13,7 @@ void resizeWindowHandle(GLFWwindow* window, int w, int h) {
 	glViewport(0, 0, w, h);
 }
 
+
 int main() {
 	GLFWwindow* window;
 
@@ -42,6 +43,10 @@ int main() {
 	// int w, h;
 
 	glfwSetWindowSizeCallback(window, &resizeWindowHandle);
+
+	std::vector<euclid::render::Point> cube_test;
+	//euclid::render::Point point1;
+	//cube_test.push_back();
 
 	while (!glfwWindowShouldClose(window)) {
 		glClear(GL_COLOR_BUFFER_BIT);
